@@ -1,0 +1,264 @@
+@charset "utf-8";
+@import "./reset.css";
+@import "./public.less";
+
+@keyframes lunbo1 {
+    0% {
+        transform: translate(0px);
+    }
+
+    20% {
+        transform: translate(-1235px);
+    }
+
+    40% {
+        transform: translate(-2470px);
+    }
+
+    60% {
+        transform: translate(-3705px);
+    }
+
+    80% {
+        transform: translate(-4940px);
+    }
+
+    100% {
+        transform: translate(-6175px);
+    }
+}
+
+.main {
+    width: 100%;
+    position: relative;
+    padding-bottom: 30px;
+
+    >.cover {
+        width: 100%;
+        height: 100%;
+        background: url("../img/bh3-失落迷迭.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        // filter: blur(1px);
+        z-index: -1;
+    }
+
+    >.animation {
+        >h2 {
+            font-size: 60px;
+            font-weight: bold;
+            color: #96dbff;
+            text-align: center;
+            padding: 122px 0 30px;
+
+            >span:nth-of-type(1) {
+                color: white;
+            }
+
+            >span:nth-of-type(2) {
+                margin: 0 15px;
+            }
+
+            >span:nth-of-type(3) {
+                display: inline-block;
+                text-transform: uppercase;
+                font-size: 40px;
+                transform: skew(-11deg);
+                margin-left: -15px;
+            }
+        }
+
+        >div {
+            width: 1264px;
+            height: 342px;
+            margin: 0 auto;
+            padding: 17px 15px;
+            border-radius: 10px;
+            position: relative;
+            background-color: rgba(255, 255, 255, .5);
+
+            >div {
+                width: 1235px;
+                height: 303px;
+                position: absolute;
+                top: 17px;
+                left: 15px;
+                overflow: hidden;
+
+                >ul {
+                    display: flex;
+                    // animation: lunbo1 20s infinite;
+                    // transition: all .5s linear;
+                    position: absolute;
+
+                    >li {
+                        >a {
+                            display: block;
+
+                            >img {
+                                border-radius: 5px;
+                                width: 1235px;
+                                height: 303px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            >ul {
+                position: absolute;
+                display: flex;
+                right: 20px;
+                bottom: 40px;
+
+                >li {
+                    >img {
+                        display: block;
+                        border: 2px solid rgba(255, 255, 255, .5);
+                        margin-right: 10px;
+
+                        &:hover {
+                            border-color: #33c8ff;
+                        }
+                    }
+                }
+
+                .active {
+                    border-color: #33c8ff;
+                }
+            }
+        }
+    }
+
+    >.wallpapers {
+        >h2 {
+            font-size: 60px;
+            font-weight: bold;
+            color: #96dbff;
+            text-align: center;
+            padding: 30px 0 30px;
+
+            >span:nth-of-type(1) {
+                color: white;
+            }
+
+            >span:nth-of-type(2) {
+                margin: 0 15px;
+            }
+
+            >span:nth-of-type(3) {
+                display: inline-block;
+                text-transform: uppercase;
+                font-size: 40px;
+                transform: skew(-11deg);
+                margin-left: -15px;
+            }
+        }
+
+        >div {
+            width: 1264px;
+            margin: 0 auto;
+            border-radius: 5px;
+            padding: 30px 20px;
+            background-color: rgba(255, 255, 255, .5);
+
+            >div:nth-of-type(1) {
+                display: flex;
+                flex-wrap: wrap;
+                padding-bottom: 10px;
+                justify-content: space-between;
+
+                >div {
+                    width: 400px;
+                    height: 265px;
+                    padding-top: 7px;
+                    margin-bottom: 20px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    background-color: rgba(136, 204, 249, .6);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    border: 1px solid white;
+
+                    >a {
+                        display: block;
+                        overflow: hidden;
+                        width: 384px;
+                        height: 216px;
+                        margin: 0 auto;
+
+                        >img {
+                            width: 384px;
+                            height: 216px;
+                            transition: all 500ms linear;
+                        }
+                    }
+
+                    >h3 {
+                        transform: skew(-11deg);
+                        font-size: 20px;
+                        font-weight: bold;
+                        color: #333;
+                        text-align: center;
+                        line-height: 45px;
+                        transition: all 500ms linear;
+                    }
+
+                    &:hover img {
+                        transform: scale(1.2);
+                    }
+
+                    &:hover h3 {
+                        transform: scale(0.9);
+                        transform: skew(-11deg);
+                    }
+                }
+            }
+
+            >div:nth-of-type(2) {
+                display: flex;
+                justify-content: center;
+                .active{
+                    background-color: #0097de;
+                    color: white;
+                }
+                >input {
+                    font-size: 20px;
+                    font-weight: 400;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: #0097de;
+                        color: white;
+                    }
+                }
+                >input:nth-of-type(1),
+                >input:nth-last-of-type(1) {
+                    padding: 0 10px;
+                    margin-right: 10px;
+                    background-color: transparent;
+                }
+                >input:nth-of-type(3),
+                >input:nth-of-type(4),
+                >input:nth-of-type(5),
+                >input:nth-of-type(6),
+                >input:nth-of-type(7)
+                {
+                    border: 1px solid #0097de;
+                    width: 40px;
+                    height: 40px;
+                    text-align: center;
+                    margin-right: 10px;
+                }
+                >input:nth-of-type(2),
+                >input:nth-last-of-type(2){
+                    width: 85px;
+                    border: 1px solid #0097de;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

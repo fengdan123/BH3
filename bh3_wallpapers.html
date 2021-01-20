@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="bh3" content="崩坏3壁纸">
+    <title>bh3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            /* height: 900px; */
+            background: url("https://uploadstatic.mihoyo.com/contentweb/20200818/2020081815244568766.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            /* filter: blur(2px); */
+        }
+
+        .box1 {
+            width: 100%;
+            height: 92px;
+            background-color: #192732;
+            position: relative;
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-bottom: 2px solid rgba(64, 206, 255, 0.84);
+            z-index: 998;
+        }
+
+        .box11 {
+            width: 1230px;
+            height: 44px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -22px;
+            margin-left: -615px;
+            /* background-color: blue; */
+            display: flex;
+            align-items: center;
+            /* webkit-box-align: center; */
+        }
+
+        .box111 {
+            width: 800px;
+            /* background-color: burlywood; */
+            display: flex;
+        }
+
+        .box1111 {
+            width: 130px;
+            line-height: 44px;
+            text-align: center;
+            font-size: 20px;
+            position: relative;
+        }
+
+        .box1111 a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #62eaf5;
+        }
+
+        .box1111 a:hover {
+            color: white;
+        }
+
+        .box112 .box1121 a:hover {
+            color: white;
+        }
+
+        .box1111 span {
+            text-transform: uppercase;
+            display: block;
+            font: bold 8px/10px "微软雅黑";
+            color: #5a656c;
+        }
+
+        /* 加了伪元素,当做小盒子的右倾斜边框 */
+        .box1111::after {
+            content: "";
+            position: absolute;
+            left: 130px;
+            top: 0px;
+            width: 1px;
+            height: 50px;
+            background-color: #274e58;
+            transform: rotate(30deg);
+        }
+
+        .box112 {
+            width: 260px;
+            /* flex布局让某个子元素靠右显示 1.margin-left: auto; 2.flex: 1;
+   text-align: right;*/
+            margin-left: auto;
+            /* flex: 1;
+            text-align: right; */
+            display: flex;
+            padding-right: 10px;
+        }
+
+        .box112 .box1121 {
+            width: 84px;
+            height: 38px;
+            text-align: center;
+            color: #62eaf5;
+            margin-left: 30px;
+        }
+
+        .box112 .box1121 a {
+            color: #62eaf5;
+            text-decoration: none;
+            font: bold 12px/12px "微软雅黑";
+        }
+
+        .box112 .box1121 span {
+            display: block;
+            font: bold 8px/12px "微软雅黑";
+            color: #5a656c;
+
+
+        }
+
+        .cover {
+            width: 100%;
+            height: 900px;
+            position: absolute;
+            opacity: 0.3;
+            background-color: #000;
+        }
+
+        .box2 {
+            padding-top: 120px;
+            padding-bottom: 20px;
+            /* display: flex; */
+            /* background-color: #101211; */
+        }
+
+        .box21 {
+            /* background-color: #101211; */
+            font-size: 60px;
+            font-weight: bold;
+            text-align: center;
+            color: #fff;
+        }
+
+        .box211 {
+            font-size: 40px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .box3 {
+            /* width: 1235px; */
+            height: 302px;
+            width: 1235px;
+            /* background-color: aqua; */
+            border: 10px solid aqua;
+            border-radius: 10px;
+            margin: 0 auto;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #tu1 {
+            /* display: block; */
+            width: 1235px;
+            height: 100%;
+
+        }
+
+        .box31 {
+            width: 600px;
+            /* background-color: aqua; */
+            position: absolute;
+            right: 30px;
+            bottom: 17px;
+        }
+
+        .box311 {
+            width: 105px;
+            height: 65px;
+            border: 1px solid white;
+            float: right;
+            margin-left: 13px;
+        }
+
+        .tu11 {
+            width: 105px;
+            height: 65px;
+        }
+
+        .box311:hover {
+            border-color: #33c8ff;
+        }
+
+        .box4 {
+            padding-top: 20px;
+        }
+
+        /*.box311:focus{
+            border-color: #33c8ff;
+        } */
+        .box5 {
+            width: 1264px;
+            height: 905px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 10px solid rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+
+        }
+
+        .box51 {
+            width: 400px;
+            height: 258px;
+            border: 2px solid #dff3fd;
+            /* background-color: red; */
+            border-radius: 5px;
+            text-align: center;
+            padding-top: 7px;
+            float: left;
+            margin-top: 10px;
+            margin-left: 13px;
+        }
+
+        .box52 {
+            width: 384px;
+            height: 216px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .tu2 {
+            width: 100%;
+            height: 100%;
+            transition: all 1s linear;
+        }
+
+        .box511 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            text-align: center;
+            line-height: 45px;
+        }
+
+        .box51:hover .tu2 {
+            transform: scale(1.3);
+        }
+
+        .box53 {
+            width: 1226px;
+            height: 40px;
+            /* background-color: #000; */
+            margin-left: 13px;
+            margin-top: 15px;
+            float: left;
+            text-align: center;
+            color: #fff;
+        }
+
+        .box532 {
+            width: 600px;
+            height: 40px;
+            margin: 0 auto;
+            /* background-color: aliceblue; */
+        }
+
+        .box531 {
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 40px;
+            float: left;
+            border: 1px solid #0097de;
+            margin: 0 5px;
+        }
+
+        .ye {
+            width: 100px;
+        }
+
+        .box531:hover {
+            background-color: #0097de;
+        }
+
+        .sye {
+            border: 1px solid transparent;
+        }
+
+        .sye:hover {
+            color: #000;
+            background-color: transparent;
+        }
+
+        /* 尾部 */
+        .box6 {
+            background: black;
+            width: 100%;
+            height: 375px;
+            display: flex;
+            /* 弹性盒子上下居中 */
+            align-items: center;
+            /* 弹性盒子水平居中 */
+            justify-content: center;
+        }
+
+        .box6 .box61 {
+            width: 280px;
+            height: 73px;
+            font-size: 0;
+        }
+
+        .box6 .box61 .img61 {
+            width: 119px;
+            height: 42px;
+            vertical-align: middle;
+
+        }
+
+        .box6 .box61 span {
+            display: inline-block;
+            width: 1px;
+            height: 28px;
+            background: #666;
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+
+        .box6 .box61 .img62 {
+            width: 110px;
+            height: 73px;
+            vertical-align: middle;
+        }
+
+        .box6 .box62 {
+            color: #aaa;
+            margin-left: 60px;
+            line-height: 24px;
+            font-size: 12px;
+        }
+
+        .box6 .box62 .box621 a {
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .box6 .box62 .box621 .spa::after {
+            content: "";
+            border: 1px solid white;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .box6 .box62 .box622 {
+            margin-top: 10px;
+        }
+
+        .xg::after {
+            content: "";
+            border: 1px solid#aaa;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .box6 .box62 .box624 a {
+            text-decoration: none;
+            color: #aaa;
+        }
+
+        .box6 .box62 .box628 {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: start;
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+            padding: 10px 0;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            width: 800px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box11">
+            <div class="box111">
+                <div class="box1111">
+                    <a href="#"><i>官网首页</i></a><span>home</span>
+                </div>
+                <div class="box1111">
+                    <a href="#">作战资讯</a><span>news</span>
+                </div>
+                <div class="box1111">
+                    <a href="#">女武神</a><span>valkyries</span>
+                </div>
+                <div class="box1111">
+                    <a href="./bh3_wallpapers.html">动画壁纸</a><span>wallpapers</span>
+                </div>
+                <div class="box1111">
+                    <a href="https://mihoyo.tmall.com/">周边商城</a><span>merch</span>
+                </div>
+                <div class="box1111">
+                    <a href="#">官方社区</a><span>forum</span>
+                </div>
+            </div>
+            <div class="box112">
+                <div class="box1121"><a href="#">成长关爱系统</a><span>PROGRESS</span></div>
+                <div class="box1121"><a href="#">米哈游通行证</a><span>miHoYo PASS</span></div>
+            </div>
+
+        </div>
+    </div>
+    <!-- <div class="cover"></div> -->
+    <div class="box2">
+        <div class="box21">
+            <span>动画</span>
+            <span>/</span>
+            <span class="box211">ANIMATION</span>
+        </div>
+    </div>
+    <div class="box3">
+        <div><img src="https://uploadstatic.mihoyo.com/contentweb/20191113/2019111317531171204.jpg" id="tu1"></div>
+        <div class="box31">
+            <div class="box311">
+                <img src="https://uploadstatic.mihoyo.com/contentweb/20200717/2020071719070074494.png" class="tu11">
+            </div>
+            <div class="box311">
+                <img src="https://uploadstatic.mihoyo.com/contentweb/20200317/2020031711235872606.jpg" class="tu11">
+            </div>
+            <div class="box311">
+                <img src="https://uploadstatic.mihoyo.com/contentweb/20200709/2020070912382251731.jpg " class="tu11">
+            </div>
+            <div class="box311">
+                <img src="https://uploadstatic.mihoyo.com/contentweb/20191113/2019111317535128907.jpg" class="tu11">
+            </div>
+            <div class="box311">
+                <img src="https://uploadstatic.mihoyo.com/contentweb/20191113/2019111317531171204.jpg" class="tu11">
+            </div>
+        </div>
+    </div>
+    <div class="box2 box4">
+        <div class="box21">
+            <span>壁纸</span>
+            <span>/</span>
+            <span class="box211">WALLPAPERS</span>
+        </div>
+    </div>
+    <div class="box5">
+        <div class="box51">
+            <div class="box52"><img src="" class="tu2"></div>
+            <div class="box511"><span class="box512"></span></div>
+        </div>
+        <div class="box51">
+            <div class="box52"><img src="" class="tu2"></div>
+            <div class="box511"><span class="box512"></span></div>
+        </div>
+        <div class="box51">
+            <div class="box52"><img src="" class="tu2"></div>
+            <div class="box511"><span class="box512"></span></div>
+        </div>
+        <div class="box51">
+            <div class="box52"><img src="" class="tu2"></div>
+            <div class="box511"><span class="box512"></span></div>
+        </div>
+        <div class="box51">
+            <div class="box52"><img src="" class="tu2"></div>
+            <div class="box511"><span class="box512"></span></div>
+        </div>
+        <div class="box51">
+            <div class="box52"><img src="" class="tu2"></div>
+            <div class="box511"><span class="box512"></span></div>
+        </div>
+        <div class="box51">
+            <div class="box52"><img src="" class="tu2"></div>
+            <div class="box511"><span class="box512"></span></div>
+        </div>
+        <div class="box51">
+            <div class="box52"><img src="" class="tu2"></div>
+            <div class="box511"><span class="box512"></span></div>
+        </div>
+        <div class="box51">
+            <div class="box52"><img src="" class="tu2"></div>
+            <div class="box511"><span class="box512"></span></div>
+        </div>
+        <div class="box53">
+            <div class="box532">
+                <div class="box531 sye">首页</div>
+                <div class="box531 ye shangye">上一页</div>
+                <div class="box531 yeshu">1</div>
+                <div class="box531 yeshu">2</div>
+                <div class="box531 yeshu">3</div>
+                <div class="box531 yeshu">4</div>
+                <div class="box531 yeshu">5</div>
+                <div class="box531 ye xiaye">下一页</div>
+                <div class="box531 sye">尾页</div>
+            </div>
+        </div>
+    </div>
+    <div class="box6">
+        <div class="box61">
+            <img src="https://webstatic.mihoyo.com/bh3/upload/event/201908/logo_1565599399_2713.png" class="img61">
+            <span>|</span>
+            <img src="https://uploadstatic.mihoyo.com/bh3/upload/officialsites/201909/game-tion-2-logo_1568108157_3779.png"
+                class="img62">
+        </div>
+        <div class="box62">
+            <div class="box621">
+                <a href="#" class="spa">用户协议</a>
+                <a href="#" class="spa">隐私政策</a>
+                <a href="#" class="spa">自律公约</a>
+                <a href="#" class="spa">家长监护工程</a>
+                <a href="#" class="spa">关于我们</a>
+                <a href="#" class="spa">联系我们</a>
+                <a href="#">加入我们</a>
+            </div>
+            <div class="box622">
+                健康游戏忠告：抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。
+            </div>
+            <div class="box623">
+                <sapn class="xg">适龄提示： 本游戏适合16岁以上玩家娱乐</sapn>
+                <sapn class="xg">沪公网安备31010402001116号</sapn>
+                <span>增值电信业务经营许可证：沪B2-20200235</span>
+            </div>
+            <div class="box624">
+                <a href="" class="xg">沪ICP备14042301号-2</a>
+                <span class="xg"> 沪网文〔2020〕3720-270号 </span>
+                <span class="xg">文网游备字〔2016〕Ｍ-CSG 1244 号</span>
+                <span>新广出审【2016】961号</span>
+            </div>
+            <div class="box625">
+                <span> 互联网违法不良信息举报邮箱: tousu@mihoyo.com </span>
+                <span> 互联网违法不良信息举报电话: 021-34203135 （工作时间：每天10点 - 20点） </span>
+            </div>
+            <div class="box626"> 亲爱的市民朋友，上海警方反诈劝阻电话“962110”系专门针对避免您财产被骗受损而设，请您一旦收到来电，立即接听。 </div>
+            <div class="box627">©2012-2020 米哈游科技（上海）有限公司版权所有</div>
+            <div class="box628">
+                <a href="https://xinyong.yunaq.com/certificate?domain=www.bh3.com&from=label&code=90020" target="_blank">
+                    <img src="https://uploadstatic.mihoyo.com/bh3/upload/officialsites/201911/shiming_1575020038_4113.png">
+                </a>
+                <a href="http://www.shjbzx.cn/" target="_blank">
+                    <img src="https://uploadstatic.mihoyo.com/bh3/upload/officialsites/201911/jubao_1575020039_5071.png">
+                </a>
+                <a href="https://www.12377.cn/" target="_blank">
+                    <img src="https://uploadstatic.mihoyo.com/bh3/upload/officialsites/202005/youhai_1589857356_1416.png">
+                </a>
+                <a href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/toDetail/4028c08e4acd2047014ace03ffae00fd" target="_blank">
+                    <img src="https://uploadstatic.mihoyo.com/bh3/upload/officialsites/201911/culture_1575020039_5478.png">
+                </a>
+                <a href="https://zwfw.mct.gov.cn/" target="_blank">
+                    <img src="https://uploadstatic.mihoyo.com/bh3/upload/officialsites/201911/etag_1575020039_9561.png">
+                </a>
+                <a href="javascript:">
+                    <img src="https://uploadstatic.mihoyo.com/bh3/upload/officialsites/201911/e110_1575020039_7486.png">
+                </a>
+                <a href="javascript">
+                    <img src="https://uploadstatic.mihoyo.com/bh3/upload/officialsites/201911/zhizhao_1575020039_4362.png">
+                </a>
+                <a href="javascript">
+                    <img src="https://uploadstatic.mihoyo.com/bh3/upload/officialsites/201911/ico-16_1575019781_7106.png">
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var btm = document.getElementsByClassName("box531");
+    window.onload = function () {
+        var url = "https://www.bh3.com/content/bh3Cn/getContentList?pageSize=9&pageNum=1&channelId=177";
+        var request = new XMLHttpRequest();
+        request.open("get", url);
+        request.send(null);
+        request.onload = function () {
+            if (request.status == 200) {
+                var json = JSON.parse(request.responseText);
+                for (let i = 0; i < 9; i++) {
+                    var kkt = json["data"]["list"][i]["ext"][0]["value"][0]["url"]
+                    var name = json["data"]["list"][i]["ext"][1]["value"]
+                    var tu2 = document.getElementsByClassName("tu2")[i];
+                    tu2.src = kkt;
+                    var wz = document.getElementsByClassName("box511")[i];
+                    var span = document.getElementsByClassName("box512")[i];
+                    span.innerHTML = name;
+                    wz.append(span)
+                }
+            }
+        }
+    }
+    for (let q = 2; q < 7; q++) {
+        btm[q].onclick = function () {
+            url = "https://www.bh3.com/content/bh3Cn/getContentList?pageSize=9&pageNum=" + btm[q].innerText + "&channelId=177";
+            request = new XMLHttpRequest();
+            request.open("get", url);
+            request.send(null);
+            request.onload = function () {
+                if (request.status == 200) {
+                    var json = JSON.parse(request.responseText);
+                    for (let i = 0; i < 9; i++) {
+                        kkt = json["data"]["list"][i]["ext"][0]["value"][0]["url"]
+                        name = json["data"]["list"][i]["ext"][1]["value"]
+                        tu2 = document.getElementsByClassName("tu2")[i];
+                        tu2.src = kkt;
+                        wz = document.getElementsByClassName("box511")[i];
+                        span = document.getElementsByClassName("box512")[i];
+                        span.innerHTML = name;
+                        wz.append(span)
+                    }
+                }
+            }
+        }
+    }
+    btm[0].onclick = function () {
+        url = "https://www.bh3.com/content/bh3Cn/getContentList?pageSize=9&pageNum=1&channelId=177";
+        request = new XMLHttpRequest();
+        request.open("get", url);
+        request.send(null);
+        request.onload = function () {
+            if (request.status == 200) {
+                var json = JSON.parse(request.responseText);
+                for (let i = 0; i < 9; i++) {
+                    kkt = json["data"]["list"][i]["ext"][0]["value"][0]["url"]
+                    name = json["data"]["list"][i]["ext"][1]["value"]
+                    tu2 = document.getElementsByClassName("tu2")[i];
+                    tu2.src = kkt;
+                    wz = document.getElementsByClassName("box511")[i];
+                    span = document.getElementsByClassName("box512")[i];
+                    span.innerHTML = name;
+                    wz.append(span)
+                }
+            }
+        }
+    }
+    btm[8].onclick = function () {
+        url = "https://www.bh3.com/content/bh3Cn/getContentList?pageSize=9&pageNum=5&channelId=177";
+        request = new XMLHttpRequest();
+        request.open("get", url);
+        request.send(null);
+        request.onload = function () {
+            if (request.status == 200) {
+                var json = JSON.parse(request.responseText);
+                for (let i = 0; i < 9; i++) {
+                    kkt = json["data"]["list"][i]["ext"][0]["value"][0]["url"]
+                    name = json["data"]["list"][i]["ext"][1]["value"]
+                    tu2 = document.getElementsByClassName("tu2")[i];
+                    tu2.src = kkt;
+                    wz = document.getElementsByClassName("box511")[i];
+                    span = document.getElementsByClassName("box512")[i];
+                    span.innerHTML = name;
+                    wz.append(span)
+                }
+            }
+        }
+    }
+    btm[1].onclick = function () {
+        let qaq = parseInt(url.replace(/[^0-9]/ig, "").substring(3, 4))
+        if (qaq != 1) {
+            url = "https://www.bh3.com/content/bh3Cn/getContentList?pageSize=9&pageNum=" + (qaq - 1).toString() + "&channelId=177";
+            request = new XMLHttpRequest();
+            request.open("get", url);
+            request.send(null);
+            request.onload = function () {
+                if (request.status == 200) {
+                    var json = JSON.parse(request.responseText);
+                    for (let i = 0; i < 9; i++) {
+                        kkt = json["data"]["list"][i]["ext"][0]["value"][0]["url"]
+                        name = json["data"]["list"][i]["ext"][1]["value"]
+                        tu2 = document.getElementsByClassName("tu2")[i];
+                        tu2.src = kkt;
+                        wz = document.getElementsByClassName("box511")[i];
+                        span = document.getElementsByClassName("box512")[i];
+                        span.innerHTML = name;
+                        wz.append(span)
+                    }
+                }
+            }
+        }
+    }
+    btm[7].onclick = function () {
+        let qaq = parseInt(url.replace(/[^0-9]/ig, "").substring(3, 4))
+        if (qaq != 5) {
+            url = "https://www.bh3.com/content/bh3Cn/getContentList?pageSize=9&pageNum=" + (qaq + 1).toString() + "&channelId=177";
+            request = new XMLHttpRequest();
+            request.open("get", url);
+            request.send(null);
+            request.onload = function () {
+                if (request.status == 200) {
+                    var json = JSON.parse(request.responseText);
+                    for (let i = 0; i < 9; i++) {
+                        kkt = json["data"]["list"][i]["ext"][0]["value"][0]["url"]
+                        name = json["data"]["list"][i]["ext"][1]["value"]
+                        tu2 = document.getElementsByClassName("tu2")[i];
+                        tu2.src = kkt;
+                        wz = document.getElementsByClassName("box511")[i];
+                        span = document.getElementsByClassName("box512")[i];
+                        span.innerHTML = name;
+                        wz.append(span)
+                    }
+                }
+            }
+        }
+    }
+    var xzfx = document.getElementsByClassName("box311");
+    var dtp = document.getElementById("tu1");
+    var xtp = document.getElementsByClassName("tu11");
+    for (let i = 0; i < 5; i++) {
+        xzfx[i].onclick = function () {
+            dtp.src = xtp[i].src
+            // xzfx[i].style.borderColor = "#33c8ff"
+        }
+    }
+
+</script>
+
+</html>

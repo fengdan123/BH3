@@ -1,0 +1,100 @@
+@charset "utf-8";
+@import "./reset.css";
+@import "./public.less";
+
+.main {
+    background: url(/img/v_background.jpg) center top no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 142px 0;
+
+    >h1 {
+        font-size: 60px;
+        font-weight: bold;
+        color: #96dbff;
+        text-align: center;
+        padding: 50px 0;
+
+        >span:nth-of-type(1) {
+            color: white;
+            margin-right: 15px;
+        }
+
+        >span:nth-of-type(2) {}
+
+        >span:nth-of-type(3) {
+            text-transform: uppercase;
+            display: inline-block;
+            font-size: 40px;
+            transform: skew(-11deg);
+        }
+    }
+
+    >div {
+        border: 2px solid rgba(255, 255, 255, .1);
+        border-radius: 10px;
+        width: 1246px;
+        margin: 0 auto;
+        padding: 20px 20px 0;
+
+        >#list {
+            >div {
+                >div:nth-of-type(1) {
+                    display: flex;
+                    margin-bottom: 10px;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    >div:nth-of-type(1) {
+                        flex-shrink: 0;
+                        transform: skew(-11deg);
+                        font-weight: bold;
+                        font-size: 30px;
+                        color: #fff;
+                    }
+
+                    >div:nth-of-type(2) {
+                        flex: 1;
+                        height: 3px;
+                        background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.5), transparent);
+                    }
+
+                    >div:nth-of-type(3) {
+                        flex-shrink: 0;
+                        font-size: 26px;
+                        opacity: .5;
+                        font-weight: 400;
+                        color: #fff;
+                        transform: skew(-11deg);
+                        font-family: Impact, sans-serif;
+                    }
+                }
+
+                >div:nth-of-type(2) {
+                    display: flex;
+                    margin-bottom: 10px;
+
+                    >a {
+                        >div {
+                            width: 147px;
+                            height: 148px;
+                            background: url(/img/v_b1.png) no-repeat;
+                            background-size: 100% 100%;
+                            text-align: right;
+                            font-size: 14px;
+                            font-weight: bold;
+                            color: #000;
+                            padding-top: 6px;
+                            padding-left: 5px;
+                            padding-right: 1px;
+                            cursor: pointer;
+                            &:hover{
+                                background: url(/img/v_b1_yellow.png) no-repeat;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,204 @@
+@charset "utf-8";
+@import "./reset.css";
+@import "./public.less";
+
+.main {
+    background: #354c99 url(../img/news_background.jpg) center top no-repeat;
+    padding-top: 92px;
+
+    >div {
+        width: 1264px;
+        margin: 0 auto;
+
+        >div:nth-of-type(1) {
+            font-size: 60px;
+            font-weight: bold;
+            color: #9c9c9c;
+            text-align: center;
+            padding: 50px 0;
+
+            >span:nth-of-type(1) {
+                color: #fff;
+                margin-right: 15px;
+            }
+
+            >span:nth-of-type(2) {
+                display: inline-block;
+                transform: skew(-11deg);
+                font-size: 40px;
+                text-transform: uppercase;
+            }
+        }
+
+        >div:nth-of-type(2) {
+            border-radius: 5px;
+            border: 8px solid rgba(255, 255, 255, .2);
+            padding: 18px 14px;
+
+            >div:nth-of-type(1) {
+                display: flex;
+                font-size: 30px;
+                font-weight: bold;
+                color: #fff;
+                margin-bottom: 25px;
+                padding-left: 10px;
+
+                >h2 {
+                    cursor: pointer;
+                    width: 170px;
+                    height: 60px;
+                    font-size: 30px;
+                    line-height: 60px;
+                    border-radius: 14px;
+                    text-align: center;
+                    background: #0097de;
+                    margin-right: 10px;
+                    transform: skew(-20deg);
+                    font-weight: bold;
+
+                    >span {
+                        display: inline-block;
+                        transform: skew(20deg);
+                    }
+
+                    &:hover {
+                        background-color: #33c8ff;
+                    }
+                }
+
+                >.active {
+                    background-color: white;
+                    color: #0097de;
+
+                    &:hover {
+                        background-color: white;
+                    }
+                }
+            }
+
+            >div:nth-of-type(2) {
+                min-height: 200px;
+
+                >div:nth-of-type(1) {
+                    >a {
+                        display: flex;
+                        border: 2px solid #404481;
+                        border-radius: 5px;
+                        margin-bottom: 24px;
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+
+                        &:hover>div:nth-of-type(2)>p:nth-of-type(2) {
+                            color: #62eaf5;
+                        }
+
+                        >div:nth-of-type(1) {
+                            width: 225px;
+                            height: 110px;
+                            overflow: hidden;
+                            flex-shrink: 0;
+
+                            >img {
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+
+                        >div:nth-of-type(2) {
+                            display: flex;
+                            flex-direction: column;
+                            width: 970px;
+                            padding: 20px 30px;
+                            position: relative;
+                            flex-shrink: 0;
+
+                            >p:nth-of-type(1) {
+                                color: #62eaf5;
+                                font-size: 21px;
+                                font-weight: bold;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                margin-bottom: 20px;
+                                padding-bottom: 8px;
+                            }
+
+                            >p:nth-of-type(2) {
+                                font-size: 19px;
+                                color: #fff;
+                                font-weight: 400;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    width: 5px;
+                                    height: 50px;
+                                    background: url(../img/xian.png) no-repeat;
+                                    background-size: 100% 100%;
+                                    right: -21px;
+                                    top: 50%;
+                                    margin-top: -25px;
+                                }
+                            }
+
+                            >div:nth-of-type(1) {
+                                position: absolute;
+                                width: calc(~"100%"- 70px);
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                margin: auto;
+                                height: 1px;
+                                background: rgba(98, 234, 245, .2);
+
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    height: 1px;
+                                    width: 5px;
+                                    background: #62eaf5;
+                                    top: 0;
+                                    right: -7px;
+                                }
+
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    height: 1px;
+                                    width: 5px;
+                                    background: #62eaf5;
+                                    top: 0;
+                                    left: -7px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                >div:nth-of-type(2) {
+                    margin: 0 auto;
+                    width: 260px;
+                    height: 60px;
+                    line-height: 60px;
+                    text-align: center;
+                    font-size: 24px;
+                    font-weight: 400;
+                    color: #fff;
+                    border: 1px solid #fff;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #62eaf5;
+                        border-color: #62eaf5;
+                    }
+                }
+            }
+        }
+    }
+}
